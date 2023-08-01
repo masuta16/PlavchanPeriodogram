@@ -1,0 +1,17 @@
+[project]
+name = "PlavchanPeriodogram"
+version = "0.0.1"
+authors = [
+  { name="Israel Andrade", email="israndrade16@hotmail.com" },
+]
+description = "A library to use Plavchan periodogram algorithm"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/masuta16/PlavchanPeriodogram"

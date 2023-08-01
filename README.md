@@ -23,7 +23,7 @@ To use the `PlavchanPeriodogram`, you first need to import the necessary modules
 
 ```python
 import numpy as np
-from plavchan_periodogram import PlavchanPeriodogram
+from PlavchanPeriodogram import PlavchanPeriodogram
 
 # Assuming you have time and flux data in the form of NumPy arrays
 time_data = np.array([...])

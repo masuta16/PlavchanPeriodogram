@@ -14,7 +14,7 @@ The `PlavchanPeriodogram` is a Python package that provides an implementation of
 You can install the package using pip:
 
 ```bash
-pip install plavchan-periodogram
+pip install PlavchanPeriodogram
 ```
 
 ## Usage

@@ -5,7 +5,7 @@ Made by: Israel Andrade
 
 [Open in Google Colab](https://colab.research.google.com/drive/1-aPMT-sppMF3aNsvt2KxL2prhOkLRk9G)
 
-[![PyPI version](https://badge.fury.io/py/plavchan-periodogram.svg)](https://badge.fury.io/py/plavchan-periodogram)
+[![PyPI version](https://badge.fury.io/py/PlavchanPeriodogram.svg)](https://badge.fury.io/py/PlavchanPeriodogram)
 
 The `PlavchanPeriodogram` is a Python package that provides an implementation of the Plavchan Periodogram for period analysis of time series data. This algorithm is useful for identifying periodic variations in astronomical data, such as those observed in light curves from telescopes like TESS (Transiting Exoplanet Survey Satellite).
 

@@ -15,6 +15,7 @@ You can install the package using pip:
 
 ```bash
 pip install PlavchanPeriodogram
+pip install lightkurve
 ```
 
 ## Usage

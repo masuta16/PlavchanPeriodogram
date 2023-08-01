@@ -22,24 +22,43 @@ pip install PlavchanPeriodogram
 To use the `PlavchanPeriodogram`, you first need to import the necessary modules and create an instance of the class with your time and flux data. Here's an example of how to use it:
 
 ```python
+import lightkurve as lk
 import numpy as np
-from PlavchanPeriodogram import PlavchanPeriodogram
+from PlavchanPeriodogram.Plavchan_Periodogram import Plavchan_Periodogram
+# Example usage:
+# Download all available light curve files for the target 'Pi Mensae c' from TESS
+lc = lk.search_lightcurvefile('Pi Mensae c', mission='TESS').download_all()
 
-# Assuming you have time and flux data in the form of NumPy arrays
-time_data = np.array([...])
-flux_data = np.array([...])
+# Assuming you want to work with the first light curve (you can choose a different one if needed)
+lc = lc[0].PDCSAP_FLUX.normalize()
 
-# Initialize the PlavchanPeriodogram class with time and flux data
-periodogram_calculator = PlavchanPeriodogram(time_data, flux_data)
+# Extract time_data and flux_data from the light curve and convert to 1D NumPy arrays
+time_data = lc.time.value.flatten()
+flux_data = lc.flux.value.flatten()
 
 # Generate an array of trial periods to test (e.g., from 0.1 to 30.0 days)
 trial_periods = np.linspace(0.1, 30.0, 10)
-
+# Initialize the PlavchanPeriodogram class with time and flux data
+periodogram_calculator = Plavchan_Periodogram(time_data, flux_data)
 # Compute the periodogram for the trial periods
-periodogram = periodogram_calculator.compute_periodogram(trial_periods)
+periodogram_values = periodogram_calculator.compute_periodogram(trial_periods)
+# Plot the original light curve data
+plt.figure(figsize=(10, 4))
+plt.scatter(time_data, flux_data, s=5, color='blue', label='Light Curve Data')
+plt.xlabel('Time')
+plt.ylabel('Normalized Flux')
+plt.title('Original Light Curve')
+plt.grid(True)
+plt.show()
 
-# Now you have the periodogram, which contains the power values for each trial period
-print(periodogram)
+# Plot the periodogram values
+plt.figure(figsize=(10, 4))
+plt.semilogy(trial_periods, periodogram_values, marker='o', color='blue', alpha=0.5)
+plt.xlabel('Period (days)')
+plt.ylabel('Power')
+plt.title('Plavchan Periodogram Results')
+plt.grid(True)
+plt.show()
 ```
 
 ## How it Works

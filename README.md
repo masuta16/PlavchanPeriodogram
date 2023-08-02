@@ -112,10 +112,7 @@ Where:
 - $normalization$ is the sum of squared errors from the worst-fit subset of data points.
 - $sum\_of\_squared\_residuals$ is the sum of squared residuals from the smoothed curve.
 
-The Plavchan periodogram is used to detect sinusoidal variations and box-shaped periodic functions equally well. It can be particularly useful in identifying periodic time-series shapes that are not well described by other algorithms' assumptions.
-
-
-The Plavchan periodogram is used to detect sinusoidal variations and box-shaped periodic functions equally well. It can be particularly useful in identifying periodic time-series shapes that are not well described by other algorithms' assumptions.
+The Plavchan periodogram is used to detect sinusoidal variations and box-shaped periodic functions equally well. It can be particularly useful in identifying periodic time-series shapes that are not well described by other algorithms.
 
 ### Introduction
 We are discussing the Plavchan periodogram, a variation of the "phase dispersion minimization" (PDM) algorithm used for detecting periodic signals in time series data.
